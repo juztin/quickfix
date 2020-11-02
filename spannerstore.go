@@ -104,7 +104,7 @@ func (store *spannerStore) Reset() error {
 				AND senderlocid=@senderlocid
 				AND targetcompid=@targetcompid
 				AND targetsubid=@targetsubid
-				AND targetlocid?@targetlocid
+				AND targetlocid=@targetlocid
 				AND session_qualifier=@session_qualifier`,
 			Params: map[string]interface{}{
 				"creation_time":     store.cache.CreationTime(),
